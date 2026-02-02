@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -26,7 +28,7 @@ public class Message {
 
     @CreationTimestamp
     @Column(name="created_at",updatable = false)
-    private String createdAt;
+    private LocalDateTime createdAt;
 
     @ManyToOne
     @JoinColumn(name="room_id")

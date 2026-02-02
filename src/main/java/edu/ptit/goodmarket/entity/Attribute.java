@@ -27,6 +27,6 @@ public class Attribute {
     private String options;
 
     @ManyToOne
-    @Column(name="category_id")
+    @JoinColumn(name="category_id")
     private Category category;
 }

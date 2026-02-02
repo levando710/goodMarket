@@ -45,9 +45,6 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    List<Message> messages = new ArrayList<>();
-
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     List<Review> reviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "rateUser",cascade = CascadeType.ALL)
@@ -60,12 +57,12 @@ public class User {
     private List<Product> buyProducts = new ArrayList<>();
 
     @OneToMany(mappedBy = "buyUserChat",cascade = CascadeType.ALL)
-    private List<Product> buyProductChats = new ArrayList<>();
+    private List<Room> buyProductRooms = new ArrayList<>();
 
     @OneToMany(mappedBy = "sellUserChat",cascade = CascadeType.ALL)
-    private List<Product> sellProductChats = new ArrayList<>();
+    private List<Room> sellProductRooms = new ArrayList<>();
 
     @OneToMany(mappedBy = "sendUser",cascade = CascadeType.ALL)
-    private List<Product> sendProducts = new ArrayList<>();
+    private List<Message> sentMessages = new ArrayList<>();
 
 }

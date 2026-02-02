@@ -54,15 +54,15 @@ public class Product {
     private LocalDateTime createdAt;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name="sell_user_id")
     private User sellUser;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name="buy_user_id")
     private User buyUser;
 
     @ManyToOne
-    @JoinColumn(name="categor_id")
+    @JoinColumn(name="category_id")
     private Category category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
